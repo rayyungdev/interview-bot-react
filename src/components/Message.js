@@ -48,7 +48,7 @@ class Message extends React.Component
     render()
     {
         return(
-            <div className='container' style= {{width: '80%'}}>
+            <div className='container' style= {{width: '85%'}}>
                 <div id = 'chatt' style = {{overflow: 'scroll', overflowX:'hidden', height: '75vh'}} >
                     {
                         this.state.chat.map((msg) => {
