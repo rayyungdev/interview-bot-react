@@ -55,11 +55,11 @@ class Message extends React.Component
                             if(msg.from === 'cb'){
                                 return <div  style={{
                                 flexWrap:'wrap',
-                                marginRight:'500px',
+                                marginRight:'600px',
                                 marginBottom: '10px', 
                                 padding: '30px 35px',
                                 borderRadius: '100px', 
-                                fontFamily: 'revert',
+                                fontFamily: 'Roboto',
                                 fontSize: '14px',
                                 width: '70%', 
                                 backgroundColor:'lightpink', 
@@ -69,8 +69,8 @@ class Message extends React.Component
                             else{
                                 return <div style = {{marginBottom: '10px', 
                                 flexWrap:'wrap',
-                                marginLeft:'500px',
-                                fontFamily: 'revert',
+                                marginLeft:'600px',
+                                fontFamily: 'Roboto',
                                 borderRadius: '100px', 
                                 fontSize: '14px',
                                 width: '70%', 
