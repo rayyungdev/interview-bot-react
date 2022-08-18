@@ -37,6 +37,13 @@ class Message extends React.Component
             })
         }
     }
+
+    onKeyDownHandler = e => {
+        if (e.keyCode === 13) {
+          this.handleSend();
+        }
+      };
+
     render()
     {
         return(
@@ -82,6 +89,7 @@ class Message extends React.Component
                         className = 'form-control'
                         value = {this.state.msg}
                         style = {{width: '90%', float: 'left', display: 'flex'}}
+                        onKeyDown = {this.onKeyDownHandler}
                     />
                     <button  onClick={() => this.handleSend()} className = "btn btn-primary" style = {{paddingLeft: '25px', paddingRight: '25px'}}> Send </button>
                 </div>
