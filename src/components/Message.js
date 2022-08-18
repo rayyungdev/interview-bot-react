@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import 'typeface-roboto'
 
 const{REACT_APP_API_LOCATION} = process.env;
 
@@ -56,10 +57,10 @@ class Message extends React.Component
                                 flexWrap:'wrap',
                                 marginLeft:'500px',
                                 marginBottom: '10px', 
-                                padding: '20px 50px',
+                                padding: '30px 35px',
                                 borderRadius: '100px', 
-                                fontFamily: 'cursive',
-                                fontSize: '16px',
+                                fontFamily: 'revert',
+                                fontSize: '14px',
                                 width: '50%', 
                                 backgroundColor:'lightpink', 
                                 float: 'right', 
@@ -69,11 +70,11 @@ class Message extends React.Component
                                 return <div style = {{marginBottom: '10px', 
                                 flexWrap:'wrap',
                                 marginRight:'500px',
-                                fontFamily: 'cursive',
+                                fontFamily: 'revert',
                                 borderRadius: '100px', 
-                                fontSize: '16px',
+                                fontSize: '14px',
                                 width: '50%', 
-                                padding: '20px 50px',
+                                padding: '30px 35px',
                                 backgroundColor: 'lightcyan', 
                                 float: 'left', 
                                 display: 'block'}}>{msg.msag} </div>
