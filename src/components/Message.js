@@ -48,20 +48,20 @@ class Message extends React.Component
     render()
     {
         return(
-            <div className='container'>
-                <div id = 'chatt' style = {{overflow: 'scroll', overflowX:'hidden', height: '75vh'}}>
+            <div className='container' style= {{width: '80%'}}>
+                <div id = 'chatt' style = {{overflow: 'scroll', overflowX:'hidden', height: '75vh'}} >
                     {
                         this.state.chat.map((msg) => {
                             if(msg.from === 'cb'){
                                 return <div  style={{
                                 flexWrap:'wrap',
-                                marginLeft:'500px',
+                                marginRight:'600px',
                                 marginBottom: '10px', 
                                 padding: '30px 35px',
                                 borderRadius: '100px', 
                                 fontFamily: 'revert',
                                 fontSize: '14px',
-                                width: '50%', 
+                                width: '60%', 
                                 backgroundColor:'lightpink', 
                                 float: 'right', 
                                 display:'block'}}> {msg.msag} </div>
@@ -69,11 +69,11 @@ class Message extends React.Component
                             else{
                                 return <div style = {{marginBottom: '10px', 
                                 flexWrap:'wrap',
-                                marginRight:'500px',
+                                marginLeft:'600px',
                                 fontFamily: 'revert',
                                 borderRadius: '100px', 
                                 fontSize: '14px',
-                                width: '50%', 
+                                width: '60%', 
                                 padding: '30px 35px',
                                 backgroundColor: 'lightcyan', 
                                 float: 'left', 
