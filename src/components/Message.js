@@ -21,8 +21,8 @@ class Message extends React.Component
             axios.post(`https://${REACT_APP_API_LOCATION}.rayyungdev.repl.co/user`, {'msg': this.state.msg})
             .then(res => {
                 let ch = this.state.chat;
-                ch.push({from: 'user', msag: this.state.msg});
-                ch.push({from: 'cb', msag: res.data});
+                ch.push({from: 'You', msag: this.state.msg});
+                ch.push({from: 'Raymond-Bot', msag: res.data});
 
                 this.setState({chat: ch, msg: ''});
                 console.log(this.state);
@@ -52,32 +52,50 @@ class Message extends React.Component
                 <div id = 'chatt' style = {{overflow: 'scroll', overflowX:'hidden', height: '75vh'}} >
                     {
                         this.state.chat.map((msg) => {
-                            if(msg.from === 'cb'){
-                                return <div  style={{
+                            if(msg.from === 'Raymond-Bot'){
+                                return <div
+                                > 
+                                <div
+                                style={{
+                                    float: 'left',
+                                    marginLeft:'300px'
+                                }}
+                                > {msg.from} </div>
+                                <div  style={{
                                 flexWrap:'wrap',
                                 marginRight:'600px',
                                 marginBottom: '10px', 
-                                padding: '30px 35px',
+                                padding: '20px 30px',
                                 borderRadius: '100px', 
                                 fontFamily: 'Roboto',
                                 fontSize: '14px',
-                                width: '70%', 
+                                width: '85%', 
                                 backgroundColor:'lightpink', 
                                 float: 'left', 
                                 display:'block'}}> {msg.msag} </div>
+                                
+                                </div>
                             }
                             else{
-                                return <div style = {{marginBottom: '10px', 
+                                return <div> 
+                                <div
+                                style={{
+                                    float: 'right',
+                                    marginRight:'300px'
+                                }}
+                                > {msg.from} </div>
+                                <div style = {{marginBottom: '10px', 
                                 flexWrap:'wrap',
                                 marginLeft:'600px',
                                 fontFamily: 'Roboto',
                                 borderRadius: '100px', 
                                 fontSize: '14px',
-                                width: '70%', 
-                                padding: '30px 35px',
+                                width: '85%', 
+                                padding: '20px 30px',
                                 backgroundColor: 'lightcyan', 
                                 float: 'right', 
-                                display: 'block'}}>{msg.msag} </div>
+                                display: 'block'}}>{msg.msag} </div> 
+                                </div>
                             }
                         })
                     }
