@@ -55,28 +55,28 @@ class Message extends React.Component
                             if(msg.from === 'cb'){
                                 return <div  style={{
                                 flexWrap:'wrap',
-                                marginRight:'600px',
+                                marginRight:'500px',
                                 marginBottom: '10px', 
                                 padding: '30px 35px',
                                 borderRadius: '100px', 
                                 fontFamily: 'revert',
                                 fontSize: '14px',
-                                width: '60%', 
+                                width: '70%', 
                                 backgroundColor:'lightpink', 
-                                float: 'right', 
+                                float: 'left', 
                                 display:'block'}}> {msg.msag} </div>
                             }
                             else{
                                 return <div style = {{marginBottom: '10px', 
                                 flexWrap:'wrap',
-                                marginLeft:'600px',
+                                marginLeft:'500px',
                                 fontFamily: 'revert',
                                 borderRadius: '100px', 
                                 fontSize: '14px',
-                                width: '60%', 
+                                width: '70%', 
                                 padding: '30px 35px',
                                 backgroundColor: 'lightcyan', 
-                                float: 'left', 
+                                float: 'right', 
                                 display: 'block'}}>{msg.msag} </div>
                             }
                         })
