@@ -18,7 +18,7 @@ class Message extends React.Component
     handleSend = () =>{
         if (this.state.msg !=='')
         {
-            axios.post(`https://${REACT_APP_API_LOCATION}.rayyungdev.repl.co/user`, {'msg': this.state.msg})
+            axios.post(`https://${REACT_APP_API_LOCATION}/user`, {'msg': this.state.msg})
             .then(res => {
                 let ch = this.state.chat;
                 ch.push({from: 'You', msag: this.state.msg});
