@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/interview-bot-react/static/css/main.7b11823e.css",
-    "main.js": "/interview-bot-react/static/js/main.2e66f2c0.js",
+    "main.js": "/interview-bot-react/static/js/main.e093f09d.js",
     "static/js/787.8fb4aeac.chunk.js": "/interview-bot-react/static/js/787.8fb4aeac.chunk.js",
     "static/media/roboto-latin-900italic.woff": "/interview-bot-react/static/media/roboto-latin-900italic.c20d916c1a1b094c1cec.woff",
     "static/media/roboto-latin-300italic.woff": "/interview-bot-react/static/media/roboto-latin-300italic.bd5b7a13f2c52b531a2a.woff",
@@ -29,11 +29,11 @@
     "static/media/roboto-latin-900.woff2": "/interview-bot-react/static/media/roboto-latin-900.870c8c1486f76054301a.woff2",
     "index.html": "/interview-bot-react/index.html",
     "main.7b11823e.css.map": "/interview-bot-react/static/css/main.7b11823e.css.map",
-    "main.2e66f2c0.js.map": "/interview-bot-react/static/js/main.2e66f2c0.js.map",
+    "main.e093f09d.js.map": "/interview-bot-react/static/js/main.e093f09d.js.map",
     "787.8fb4aeac.chunk.js.map": "/interview-bot-react/static/js/787.8fb4aeac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7b11823e.css",
-    "static/js/main.2e66f2c0.js"
+    "static/js/main.e093f09d.js"
   ]
 }
