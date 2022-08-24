@@ -2,7 +2,8 @@ import React from 'react'
 import axios from 'axios'
 import 'typeface-roboto'
 
-const{REACT_APP_API_LOCATION, REACT_APP_PORT} = process.env;
+// const{REACT_APP_API_LOCATION, REACT_APP_PORT} = process.env;
+const{REACT_APP_API_LOCATION} = process.env;
 
 class Message extends React.Component
 {
@@ -18,7 +19,8 @@ class Message extends React.Component
     handleSend = () =>{
         if (this.state.msg !=='')
         {
-            axios.post(`https://${REACT_APP_API_LOCATION}:${REACT_APP_PORT}/user`, {'msg': this.state.msg})
+            // axios.post(`https://${REACT_APP_API_LOCATION}:${REACT_APP_PORT}/user`, {'msg': this.state.msg})
+            axios.post(`https://${REACT_APP_API_LOCATION}.repl.co/user`, {'msg': this.state.msg})
             .then(res => {
                 let ch = this.state.chat;
                 ch.push({from: 'You', msag: this.state.msg});
