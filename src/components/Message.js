@@ -17,15 +17,13 @@ class Message extends React.Component
         this.setState({msg: e.target.value})
     }
     handleSend = () =>{
-        if (this.state.msg !=='')
-        {
-            // axios.post(`https://${REACT_APP_API_LOCATION}:${REACT_APP_PORT}/user`, {'msg': this.state.msg})
-            axios.post(`https://${REACT_APP_API_LOCATION}.repl.co/user`, {'msg': this.state.msg})
-            .then(res => {
-                let ch = this.state.chat;
+        // axios.post(`https://${REACT_APP_API_LOCATION}:${REACT_APP_PORT}/user`, {'msg': this.state.msg})
+        axios.post(`https://${REACT_APP_API_LOCATION}.repl.co/user`, {'msg': this.state.msg})
+        .then(res => {
+            let ch = this.state.chat;
+            if (this.state.msg !== ""){
                 ch.push({from: 'You', msag: this.state.msg});
                 ch.push({from: 'Raymond-Bot', msag: res.data});
-
                 this.setState({chat: ch, msg: ''});
                 console.log(this.state);
                 let interval = window.setInterval(function(){
@@ -34,11 +32,11 @@ class Message extends React.Component
                     window.clearInterval(interval);
                 }, 500);
                 this.forceUpdate();
-            })
-            .catch(err => {
-                console.log(err)
-            })
-        }
+            }
+        })
+        .catch(err => {
+            console.log(err)
+        })
     }
 
     onKeyDownHandler = e => {
